@@ -1,0 +1,190 @@
+object Form1: TForm1
+  Left = 901
+  Height = 323
+  Top = 491
+  Width = 683
+  Caption = 'Form1'
+  ClientHeight = 323
+  ClientWidth = 683
+  OnCreate = FormCreate
+  LCLVersion = '2.2.6.0'
+  object Chart1: TChart
+    Left = 8
+    Height = 200
+    Top = 8
+    Width = 300
+    AllowPanning = False
+    AllowZoom = False
+    AxisList = <    
+      item
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        TickColor = clForm
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    BackColor = clCaptionText
+    Frame.Color = clForm
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    object Chart1LineSeries1: TLineSeries
+      Shadow.Color = clMaroon
+      LinePen.Color = clLime
+      Pointer.HorizSize = 2
+      Pointer.VertSize = 2
+    end
+  end
+  object EditTickrate: TEdit
+    Left = 312
+    Height = 23
+    Top = 24
+    Width = 80
+    OnChange = EditTickrateChange
+    TabOrder = 1
+    Text = '1000'
+  end
+  object EditZoom: TEdit
+    Left = 312
+    Height = 23
+    Top = 56
+    Width = 80
+    OnChange = EditZoomChange
+    TabOrder = 2
+    Text = '30'
+  end
+  object LabelTickrate: TLabel
+    Left = 400
+    Height = 23
+    Top = 24
+    Width = 186
+    Caption = 'Tick rate (ms | 100..2500)'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelZoom: TLabel
+    Left = 400
+    Height = 23
+    Top = 56
+    Width = 45
+    Caption = 'Zoom'
+    Font.Height = -17
+    ParentColor = False
+    ParentFont = False
+  end
+  object ButtonConfirm: TButton
+    Left = 312
+    Height = 48
+    Top = 88
+    Width = 80
+    Caption = 'Confirm?'
+    OnClick = ButtonConfirmClick
+    TabOrder = 3
+    Visible = False
+  end
+  object EditSell: TEdit
+    Left = 32
+    Height = 23
+    Top = 240
+    Width = 128
+    TabOrder = 4
+    Text = '0'
+  end
+  object EditBuy: TEdit
+    Left = 176
+    Height = 23
+    Top = 240
+    Width = 132
+    TabOrder = 5
+    Text = '0'
+  end
+  object LabelSell: TLabel
+    Left = 32
+    Height = 15
+    Top = 219
+    Width = 54
+    Caption = 'Sell stocks'
+    ParentColor = False
+  end
+  object LabelBuy: TLabel
+    Left = 176
+    Height = 15
+    Top = 219
+    Width = 56
+    Caption = 'Buy stocks'
+    ParentColor = False
+  end
+  object ProceedButton: TButton
+    Left = 32
+    Height = 41
+    Top = 272
+    Width = 276
+    Caption = 'Proceed'
+    OnClick = ProceedButtonClick
+    TabOrder = 6
+  end
+  object LabelMoney: TLabel
+    Left = 544
+    Height = 31
+    Top = 282
+    Width = 129
+    Caption = 'Money: 100$'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -23
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelStocks: TLabel
+    Left = 550
+    Height = 31
+    Top = 240
+    Width = 87
+    Caption = 'Stocks: 0'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -23
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelPrice: TLabel
+    Left = 320
+    Height = 31
+    Top = 240
+    Width = 85
+    Caption = 'Price: 10'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -23
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelPriceAll: TLabel
+    Left = 320
+    Height = 31
+    Top = 280
+    Width = 126
+    Caption = 'Price(All): 10'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -23
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 400
+    Top = 96
+  end
+end
